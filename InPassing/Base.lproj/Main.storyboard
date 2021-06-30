@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6Wy-Py-bfX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Controller A-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ControllerA" id="BYZ-38-t0r" customClass="ControllerA" customModule="InPassing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter text" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FPt-wT-Etd">
+                                <rect key="frame" x="62" y="431" width="290" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This label receives data passed from Controller B" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QkC-0k-1D6">
+                                <rect key="frame" x="20" y="163" width="374" height="48"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LJB-gr-Dnh">
+                                <rect key="frame" x="128.5" y="565" width="157" height="42"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <state key="normal" title="Pass Forward"/>
+                                <connections>
+                                    <action selector="passDataForward:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ojE-sv-Vnw"/>
+                                    <segue destination="TNP-yr-Ujo" kind="show" id="A59-On-lnD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="QkC-0k-1D6" secondAttribute="trailing" constant="20" id="FI3-9A-AhV"/>
+                            <constraint firstItem="QkC-0k-1D6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Icl-6V-OuJ"/>
+                            <constraint firstItem="QkC-0k-1D6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="75" id="Ki9-Iq-6H6"/>
+                            <constraint firstItem="LJB-gr-Dnh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NrQ-p6-h1t"/>
+                            <constraint firstItem="FPt-wT-Etd" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="Osg-cT-It0"/>
+                            <constraint firstItem="LJB-gr-Dnh" firstAttribute="top" secondItem="FPt-wT-Etd" secondAttribute="bottom" constant="100" id="Rcq-dL-hmf"/>
+                            <constraint firstItem="FPt-wT-Etd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Wh9-V5-QJX"/>
+                            <constraint firstItem="FPt-wT-Etd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zZ9-nC-mrT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Controller A" id="mW2-fT-IzT"/>
+                    <connections>
+                        <outlet property="btn" destination="LJB-gr-Dnh" id="zFE-KF-DC8"/>
+                        <outlet property="passedLabel" destination="QkC-0k-1D6" id="c6d-6A-1eS"/>
+                        <outlet property="textfield" destination="FPt-wT-Etd" id="0ir-7n-owu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="118.52678571428571"/>
+        </scene>
+        <!--Controller B-->
+        <scene sceneID="9jk-Nq-sqS">
+            <objects>
+                <viewController storyboardIdentifier="ControllerB" id="TNP-yr-Ujo" customClass="ControllerB" customModule="InPassing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TCT-pN-14b">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This label receives data passed from Controller A" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HHB-jV-SkO">
+                                <rect key="frame" x="20" y="163" width="374" height="48"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Io-01-VtL">
+                                <rect key="frame" x="147.5" y="565" width="119" height="42"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <state key="normal" title="Pass Back"/>
+                                <connections>
+                                    <action selector="passDataBack:" destination="TNP-yr-Ujo" eventType="touchUpInside" id="LoC-bh-Vh1"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter text" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mrs-Hd-EEB">
+                                <rect key="frame" x="62" y="431" width="290" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BAe-XE-NxN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HHB-jV-SkO" firstAttribute="leading" secondItem="BAe-XE-NxN" secondAttribute="leading" constant="20" id="58o-eC-lGv"/>
+                            <constraint firstItem="5Io-01-VtL" firstAttribute="top" secondItem="mrs-Hd-EEB" secondAttribute="bottom" constant="100" id="BhB-Uu-90J"/>
+                            <constraint firstItem="mrs-Hd-EEB" firstAttribute="centerY" secondItem="TCT-pN-14b" secondAttribute="centerY" id="GB2-JF-uVe"/>
+                            <constraint firstItem="mrs-Hd-EEB" firstAttribute="centerX" secondItem="TCT-pN-14b" secondAttribute="centerX" id="T7c-Wl-eRI"/>
+                            <constraint firstItem="5Io-01-VtL" firstAttribute="centerX" secondItem="TCT-pN-14b" secondAttribute="centerX" id="UCL-11-o6j"/>
+                            <constraint firstItem="mrs-Hd-EEB" firstAttribute="width" secondItem="TCT-pN-14b" secondAttribute="width" multiplier="0.7" id="dbB-Xu-afD"/>
+                            <constraint firstItem="BAe-XE-NxN" firstAttribute="trailing" secondItem="HHB-jV-SkO" secondAttribute="trailing" constant="20" id="hOZ-Av-cSW"/>
+                            <constraint firstItem="HHB-jV-SkO" firstAttribute="top" secondItem="BAe-XE-NxN" secondAttribute="top" constant="75" id="tRn-4d-Kax"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Controller B" id="PiB-vV-FS3"/>
+                    <connections>
+                        <outlet property="btn" destination="5Io-01-VtL" id="5l4-RX-ul9"/>
+                        <outlet property="passedLabel" destination="HHB-jV-SkO" id="EEa-Ye-SHO"/>
+                        <outlet property="textfield" destination="mrs-Hd-EEB" id="k0J-bT-Zza"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ddj-6u-NL5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1784" y="119"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Xps-YP-Aho">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6Wy-Py-bfX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ddZ-S5-mZe">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="y2t-sn-PLH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dj0-zY-ebJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="118.52678571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
