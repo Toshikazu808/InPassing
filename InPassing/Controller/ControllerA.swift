@@ -14,7 +14,6 @@ class ControllerA: UIViewController {
    
    override func viewDidLoad() {
       super.viewDidLoad()
-//      vcB.delegate = self
    }
    
    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -36,7 +35,6 @@ class ControllerA: UIViewController {
       vc.txt = textfield.text!
       self.navigationController?.pushViewController(vc, animated: true)
    }
-   
 }
 
 extension ControllerA: ControllerBDelegate {
