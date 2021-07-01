@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BCD16026268E0083006ABB8B /* ControllerC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD16024268E0083006ABB8B /* ControllerC.swift */; };
+		BCD16027268E0083006ABB8B /* ControllerC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCD16025268E0083006ABB8B /* ControllerC.xib */; };
 		BCF8BFCF268CC90D00E08EA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF8BFCE268CC90D00E08EA2 /* AppDelegate.swift */; };
 		BCF8BFD1268CC90D00E08EA2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF8BFD0268CC90D00E08EA2 /* SceneDelegate.swift */; };
 		BCF8BFD3268CC90D00E08EA2 /* ControllerA.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF8BFD2268CC90D00E08EA2 /* ControllerA.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BCD16024268E0083006ABB8B /* ControllerC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerC.swift; sourceTree = "<group>"; };
+		BCD16025268E0083006ABB8B /* ControllerC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ControllerC.xib; sourceTree = "<group>"; };
 		BCF8BFCB268CC90D00E08EA2 /* InPassing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InPassing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCF8BFCE268CC90D00E08EA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCF8BFD0268CC90D00E08EA2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +43,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BCD16022268E004E006ABB8B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BCF8BFD2268CC90D00E08EA2 /* ControllerA.swift */,
+				BCF8BFE2268CEAFC00E08EA2 /* ControllerB.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BCD16023268E0067006ABB8B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BCD16024268E0083006ABB8B /* ControllerC.swift */,
+				BCD16025268E0083006ABB8B /* ControllerC.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		BCF8BFC2268CC90C00E08EA2 = {
 			isa = PBXGroup;
 			children = (
@@ -61,8 +83,8 @@
 				BCF8BFCE268CC90D00E08EA2 /* AppDelegate.swift */,
 				BCF8BFD0268CC90D00E08EA2 /* SceneDelegate.swift */,
 				BCF8BFD4268CC90D00E08EA2 /* Main.storyboard */,
-				BCF8BFD2268CC90D00E08EA2 /* ControllerA.swift */,
-				BCF8BFE2268CEAFC00E08EA2 /* ControllerB.swift */,
+				BCD16023268E0067006ABB8B /* View */,
+				BCD16022268E004E006ABB8B /* Controller */,
 				BCF8BFD7268CC90F00E08EA2 /* Assets.xcassets */,
 				BCF8BFD9268CC90F00E08EA2 /* LaunchScreen.storyboard */,
 				BCF8BFDC268CC90F00E08EA2 /* Info.plist */,
@@ -130,6 +152,7 @@
 				BCF8BFDB268CC90F00E08EA2 /* LaunchScreen.storyboard in Resources */,
 				BCF8BFD8268CC90F00E08EA2 /* Assets.xcassets in Resources */,
 				BCF8BFD6268CC90D00E08EA2 /* Main.storyboard in Resources */,
+				BCD16027268E0083006ABB8B /* ControllerC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +166,7 @@
 				BCF8BFD3268CC90D00E08EA2 /* ControllerA.swift in Sources */,
 				BCF8BFCF268CC90D00E08EA2 /* AppDelegate.swift in Sources */,
 				BCF8BFE3268CEAFC00E08EA2 /* ControllerB.swift in Sources */,
+				BCD16026268E0083006ABB8B /* ControllerC.swift in Sources */,
 				BCF8BFD1268CC90D00E08EA2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

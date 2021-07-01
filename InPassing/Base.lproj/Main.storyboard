@@ -28,33 +28,52 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LJB-gr-Dnh">
-                                <rect key="frame" x="128.5" y="565" width="157" height="42"/>
+                                <rect key="frame" x="91" y="565" width="232" height="42"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                <state key="normal" title="Pass Forward"/>
+                                <state key="normal" title="Pass To Controller B"/>
                                 <connections>
                                     <action selector="passDataForward:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ojE-sv-Vnw"/>
                                     <segue destination="TNP-yr-Ujo" kind="show" id="A59-On-lnD"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fxb-Va-6JV">
+                                <rect key="frame" x="74" y="677" width="266" height="42"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                <state key="normal" title="Pass To Controller C xib"/>
+                                <connections>
+                                    <action selector="forwardPassViaXib:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3DI-Vc-1ih"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This label receives data from Controller C" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uy2-rT-RuW">
+                                <rect key="frame" x="70" y="271" width="274" height="50.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="uy2-rT-RuW" firstAttribute="top" secondItem="QkC-0k-1D6" secondAttribute="bottom" constant="60" id="0Uh-8q-vTk"/>
+                            <constraint firstItem="uy2-rT-RuW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="5QB-NF-Qck"/>
                             <constraint firstAttribute="trailing" secondItem="QkC-0k-1D6" secondAttribute="trailing" constant="20" id="FI3-9A-AhV"/>
                             <constraint firstItem="QkC-0k-1D6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Icl-6V-OuJ"/>
                             <constraint firstItem="QkC-0k-1D6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="75" id="Ki9-Iq-6H6"/>
                             <constraint firstItem="LJB-gr-Dnh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NrQ-p6-h1t"/>
                             <constraint firstItem="FPt-wT-Etd" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="Osg-cT-It0"/>
                             <constraint firstItem="LJB-gr-Dnh" firstAttribute="top" secondItem="FPt-wT-Etd" secondAttribute="bottom" constant="100" id="Rcq-dL-hmf"/>
+                            <constraint firstItem="fxb-Va-6JV" firstAttribute="top" secondItem="LJB-gr-Dnh" secondAttribute="bottom" constant="70" id="SeZ-FB-TaB"/>
                             <constraint firstItem="FPt-wT-Etd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Wh9-V5-QJX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uy2-rT-RuW" secondAttribute="trailing" constant="70" id="fSZ-tu-BmM"/>
+                            <constraint firstItem="fxb-Va-6JV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="whI-JK-nnc"/>
                             <constraint firstItem="FPt-wT-Etd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zZ9-nC-mrT"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Controller A" id="mW2-fT-IzT"/>
                     <connections>
-                        <outlet property="btn" destination="LJB-gr-Dnh" id="zFE-KF-DC8"/>
                         <outlet property="passedLabel" destination="QkC-0k-1D6" id="c6d-6A-1eS"/>
                         <outlet property="textfield" destination="FPt-wT-Etd" id="0ir-7n-owu"/>
+                        <outlet property="vcCLabel" destination="uy2-rT-RuW" id="IYy-9G-tc6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -10,8 +10,7 @@ import UIKit
 class ControllerA: UIViewController {
    @IBOutlet weak var passedLabel: UILabel!
    @IBOutlet weak var textfield: UITextField!
-   @IBOutlet weak var btn: UIButton!
-   private var vcB = ControllerB()
+   @IBOutlet weak var vcCLabel: UILabel!
    
    override func viewDidLoad() {
       super.viewDidLoad()
@@ -32,6 +31,12 @@ class ControllerA: UIViewController {
       // Storyboard segue to ControllerB
    }
    
+   @IBAction func forwardPassViaXib(_ sender: UIButton) {
+      let vc = ControllerC(nibName: "ControllerC", bundle: nil)
+      vc.txt = textfield.text!
+      self.navigationController?.pushViewController(vc, animated: true)
+   }
+   
 }
 
 extension ControllerA: ControllerBDelegate {
@@ -40,3 +45,8 @@ extension ControllerA: ControllerBDelegate {
    }
 }
 
+extension ControllerA: ControllerCDelegate {
+   func fromControllerC(text: String) {
+      vcCLabel.text = text
+   }
+}
